@@ -33,6 +33,13 @@
 				<li><a href="{{ site.baseurl }}/groundhog">groundhog</a></li>
 			</ul>
 		</nav>
+	<hr>
+		
+	{% for p in site.pages %}
+		{% if p.animal=="rodent" %}
+			<a href="{{p.permalink }}"> {{p.title}} </a>
+		{% endif %}
+	{% endfor %}
 		
         <h1>{{ page.title }}</h1>
 		
