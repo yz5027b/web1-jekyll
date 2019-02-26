@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ site.title }}</title>
+	<title>Title goes here</title>
 	<meta name="description" content="{{ page.description }}">
 	
 	<!-- Enable responsive layouts; tell browsers not to shrink pages to fit small screens -->
@@ -14,33 +14,37 @@
 	<!-- For production, combine all of the stylesheets -->
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/sitewide.css">
 	
-	<!-- pull in webfonts -->
+	<!-- Webfonts -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 </head>
-<body>
+<body class="homepage">
+<!-- Change this classname for each page/type! -->
 
-	<!-- Page content goes inside the container -->
-	<!-- In general, you should have only one container per page. -->
+	<!-- Page content typically goes inside the container -->
 	<div class="container">
 
+		<!-- global navbar -->
 		<nav class="global-nav">
 	        <ul>
-				<li><a href="{{ site.baseurl }}">Home</a></li>
+				<li><a href="{{ site.baseurl }}/">Home</a></li>
 				<li><a href="{{ site.baseurl }}/forecast">Forecast</a></li>
+				<li><a href="{{ site.baseurl }}/operations">Operations</a></li>
 			</ul>
 		</nav>
 		
         <h1>{{ page.title }}</h1>
 		
+		{{ content }}
+
+		<hr>
+
 		<p>Today's color is: {{ page.color }}</p>
 
         {% if page.date %}
     		<p>Updated {{ page.date | date: "%A, %B %-d, %Y" }}</p>
         {% endif %}
 		
-        {{ content }}
-
 	</div><!-- end container -->
 	
 </body>
