@@ -30,7 +30,11 @@
 				<li><a href="{{ site.baseurl }}/">Home</a></li>
 				<li><a href="{{ site.baseurl }}/forecast">Forecast</a></li>
 				<li><a href="{{ site.baseurl }}/operations">Operations</a></li>
+<<<<<<< HEAD
 				<li><a href="{{ site.baseurl }}/groundhog">groundhog</a></li>
+=======
+				<li><a href="{{ site.baseurl }}/groundhog.html">Groundhog</a></li>
+>>>>>>> adavidramos/master
 			</ul>
 		</nav>
 	<hr>
@@ -43,9 +47,21 @@
 		
  	<hr>
 		
+	<hr>
+		
+	{% for p in site.pages %}
+		{% if p.animal=="rodent" %}
+			<a href="{{ site.baseurl }}{{ p.url }}"> {{ p.title }} </a>
+		{% endif %}
+	{% endfor %}	
+		
+		
+	<hr>
+		
         <h1>{{ page.title }}</h1>
 		
 		{{ content }}
+<<<<<<< HEAD
 		
 		Our animal: {{page.animal}}
 		
@@ -53,9 +69,16 @@
 			This page has an animal: {{page.animal}}
 		{% endif %}
 		
+=======
+				
+		{% if page.animal=="rodent" %}
+			We've got rodents!
+		{% endif %}
+
+>>>>>>> adavidramos/master
 		<hr>
 
-		<p>Today's color is: {{ page.color }}</p>
+		<p>Your color is: {{ page.color }}</p>
 
         {% if page.date %}
     		<p>Updated {{ page.date | date: "%A, %B %-d, %Y" }}</p>
