@@ -38,7 +38,7 @@
 		
 	{% for p in site.pages %}
 		{% if p.animal=="rodent" %}
-			<a href="{{ p.url }}"> {{ p.title }} </a>
+			<a href="{{ site.baseurl }}{{ p.url }}"> {{ p.title }} </a>
 		{% endif %}
 	{% endfor %}	
 		
