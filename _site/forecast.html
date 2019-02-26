@@ -4,15 +4,15 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ site.title }}</title>
-	<meta name="description" content="{{ page.description }}">
+	<title>Your awesome title</title>
+	<meta name="description" content="">
 	
 	<!-- Enable responsive layouts; tell browsers not to shrink pages to fit small screens -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Load styles -->
 	<!-- For production, combine all of the stylesheets -->
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/sitewide.css">
+	<link rel="stylesheet" href="/web1-jekyll/css/sitewide.css">
 	
 	<!-- pull in webfonts -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -24,17 +24,23 @@
 	<!-- In general, you should have only one container per page. -->
 	<div class="container">
 
-        <p><a href="{{ site.url }}{{ site.baseurl }}">Home</a></p>
-
-        <h1>{{ page.title }}</h1>
+		<nav class="global-nav">
+	        <ul>
+				<li><a href="/web1-jekyll">Home</a></li>
+				<li><a href="/web1-jekyll/forecast">Forecast</a></li>
+			</ul>
+		</nav>
 		
-	<p>Today's color is: {{ page.color }}</p>
-
-        {% if page.date %}
-    		<p>{{ page.date | date: "%A, %B %-d, %Y" }}</p>
-        {% endif %}
+        <h1>An Interior Page</h1>
 		
-        {{ content }}
+		<p>Today's color is: Yellow</p>
+
+        
+    		<p>Updated Tuesday, March 5, 2019</p>
+        
+		
+        <p>This is an interior page.</p>
+
 
 	</div><!-- end container -->
 	
