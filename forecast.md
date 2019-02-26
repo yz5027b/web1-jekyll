@@ -6,3 +6,10 @@ color: Yellow
 ---
 
 This is an interior page.
+
+#### The groundhog says
+
+The forecast is snow.
+Also, who thought that a groundhog was good at meterology?
+
+Groundhogs are relatives of the squirrel.
